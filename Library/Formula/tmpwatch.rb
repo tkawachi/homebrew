@@ -12,6 +12,7 @@ class Tmpwatch < Formula
   end
 
   test do
-    system sbin/"tmpwatch", "--test", "30d", "."
+    Dir.mkdir("tmp_dir")
+    system sbin/"tmpwatch", "--test", "30d", "tmp_dir"
   end
 end
